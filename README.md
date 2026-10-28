@@ -43,8 +43,8 @@ Screenshots supplied by the project owner. Visible third-party applications are 
 
 ## Quick start
 
-1. Extract the portable ZIP from [Releases](https://github.com/asseries/flow-desk/releases).
-2. Keep `FlowDesk.exe`, `FlowDesk.DesktopWorker.exe` and the **native** folder together. Run `FlowDesk.exe`.
+1. Download **FlowDesk-Setup-win-x64.exe** from [Releases](https://github.com/asseries/flow-desk/releases/latest) and run it. Installation is per-user, without administrator elevation. Choose optional desktop and Windows sign-in shortcuts.
+2. Launch **Flow Desk** from Start. Alternatively, extract the portable ZIP and keep `FlowDesk.exe`, `FlowDesk.DesktopWorker.exe` and **native** together.
 3. Choose **☰ → Add window…**, select running windows and click **Add selected**. Start with **Aligned** mode.
 4. Use **☰ → Split** to create a second panel. Drag the divider or tabs to organize the workspace.
 5. Save a reusable layout with **☰ → Workspaces → Save workspace…**. Unsaved workspaces are temporary.
@@ -60,7 +60,9 @@ Screenshots supplied by the project owner. Visible third-party applications are 
 
 ### Start with Windows
 
-Press `Win+R`, open `shell:startup`, and create a shortcut to `FlowDesk.exe` with this target:
+The installer offers **Start Flow Desk when I sign in to Windows** (optional). It creates a Startup shortcut with `--background`. The app is listed in Windows **Installed apps** with an uninstaller. Uninstall removes installed files and shortcuts while retaining your saved workspace data in `%LOCALAPPDATA%\FlowDesk`.
+
+For portable installs, press `Win+R`, open `shell:startup`, and create a shortcut to `FlowDesk.exe` with this target:
 
 ```text
 "C:\path\to\FlowDesk.exe" --background
@@ -78,6 +80,8 @@ Requirements: Windows x64 and .NET Framework 4.8, including the framework C# com
 ```
 
 Build output includes the main application, isolated desktop helper, icon, native DLL and third-party license/provenance. The MIT-licensed native dependency and its source are vendored in `third_party/VirtualDesktopAccessor`; there are **no runtime downloads**.
+
+To build the single-file installer, install [Inno Setup 6](https://jrsoftware.org/isdl.php), then run `.\build-installer.ps1` (or pass `-Compiler` with your `ISCC.exe` path). Output: `dist/installer/FlowDesk-Setup-win-x64.exe` and its SHA-256 checksum. CI builds it and tests per-user installation, sign-in/Start shortcuts, Installed apps registration, the installed runtime and uninstallation on a disposable Windows runner. The current build is unsigned.
 
 ### Tests
 

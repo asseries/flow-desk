@@ -16,6 +16,12 @@ jobs:
       - name: Headless model checks
         shell: pwsh
         run: ./test.ps1 -ModelOnly
+      - name: Build single-file installer
+        shell: pwsh
+        run: ./build-installer.ps1
+      - name: Test install and uninstall
+        shell: pwsh
+        run: ./tests/InstallerSmoke.ps1
       - uses: actions/upload-artifact@v4
         with:
           name: FlowDesk-windows-x64
@@ -24,3 +30,7 @@ jobs:
             dist/FlowDesk.ico
             dist/FlowDesk.DesktopWorker.exe
             dist/native/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FlowDesk-installer-win-x64
+          path: dist/installer/*

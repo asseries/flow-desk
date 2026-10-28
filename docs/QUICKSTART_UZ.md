@@ -4,13 +4,15 @@ Flow Desk — haqiqiy Windows ilovalarini tablar va panellarda boshqaradigan och
 
 ## Boshlash
 
-1. Releases’dan portable ZIP’ni yuklab, to‘liq oching.
-2. `FlowDesk.exe`, `FlowDesk.DesktopWorker.exe` va `native` papkasi birga tursin.
-3. `FlowDesk.exe`ni ishga tushiring.
+1. [Releases](https://github.com/asseries/flow-desk/releases/latest) sahifasidan `FlowDesk-Setup-win-x64.exe`ni yuklab, ishga tushiring. Administrator huquqi talab qilinmaydi.
+2. Xohlasangiz Windowsga kirganda avtomatik boshlash va Desktop yorlig‘ini belgilang.
+3. Start menyusidan **Flow Desk**ni oching. Portable ZIP ham mavjud: uni to‘liq ochib, `FlowDesk.exe`ni ishga tushirish mumkin.
 4. **☰ → Add window…** orqali ochiq ilovalarni tanlang yoki **Run app…** orqali ilova ishga tushiring.
 5. **Split** orqali yonma-yon yoki yuqori/past panel yarating; chegarasini sudrab o‘lchamini o‘zgartiring.
 
 Tabdagi **×** ilovani yopmaydi — uni guruhdan chiqaradi. Ilova oynasini yopish alohida kontekst-menyu amalidir.
+
+O‘rnatilgan dastur Windows **Installed apps** ro‘yxatida chiqadi va o‘sha yerdan o‘chiriladi. Saqlangan workspace ma’lumotlari o‘chirilmaydi. Avtozapusk `--background` orqali faqat tray rejimida boshlaydi.
 
 Workspace’lar vaqtinchalik. Qayta ishlatish uchun **☰ → Workspaces → Save workspace…** orqali saqlang. Ulanmagan eski nomlar bo‘sh qora tab sifatida chiqarilmaydi.
 
