@@ -1,0 +1,34 @@
+# Local builds, test profiles, screenshots captured during tests and packages
+/dist/
+/portable/
+*.zip
+*.log
+*.tmp
+*.user
+*.suo
+*.pdb
+.vs/
+.idea/
+.vscode/
+**/target/
+**/bin/Debug/
+**/bin/Release/
+**/obj/
+
+# Never publish personal runtime state or credentials
+session.xml
+legacy-workspaces.xml
+recovery/
+desktop-recovery.log
+.env
+.env.*
+*.pem
+*.pfx
+*.key
+
+# The reviewed, pinned dependency is intentionally vendored
+*.dll
+!/third_party/VirtualDesktopAccessor/bin/VirtualDesktopAccessor.dll
+
+# Local screenshot-fixture output (README uses owner-supplied screenshots)
+/docs/images/split-workspace.png

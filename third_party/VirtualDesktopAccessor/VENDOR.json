@@ -1,0 +1,10 @@
+{
+  "Project": "VirtualDesktopAccessor",
+  "License": "MIT",
+  "Release": "2024-12-16-windows11",
+  "ReleaseSourceCommit": "aac8fc6e33178ae74eaaa55c0c5d88f73c7dea8b",
+  "ReferenceSourceCommit": "ceb648849dcc5760a7f4ed223308ffe3de0b51c6",
+  "DllSHA256": "8740C572A1C000E3B87FFEB1E4C397EAE9AF3BD4A2ABDC3BCFFACAB4493F8FF5",
+  "ValidatedOS": "Windows 11 26H2 26300.9711",
+  "RuntimeNetworkRequired": false
+}

@@ -1,0 +1,26 @@
+name: Windows build
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build local runtime bundle
+        shell: pwsh
+        run: ./build.ps1
+      - name: Headless model checks
+        shell: pwsh
+        run: ./test.ps1 -ModelOnly
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FlowDesk-windows-x64
+          path: |
+            dist/FlowDesk.exe
+            dist/FlowDesk.ico
+            dist/FlowDesk.DesktopWorker.exe
+            dist/native/
