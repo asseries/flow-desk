@@ -19,6 +19,7 @@ MinVersion=10.0
 DisableProgramGroupPage=yes
 LicenseFile=..\LICENSE
 UninstallDisplayIcon={app}\FlowDesk.exe
+UninstallDisplayName=Flow Desk
 SetupIconFile={#RuntimeDir}\FlowDesk.ico
 OutputDir={#SetupOutputDir}
 OutputBaseFilename=FlowDesk-Setup-win-x64
